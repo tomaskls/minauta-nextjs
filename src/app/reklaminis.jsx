@@ -1,9 +1,6 @@
 import Image from 'next/image';
 
 export default function ReklaminisSkydelis() {
-  // Automatiškai gauname dabartinius metus
-  const currentYear = new Date().getFullYear();
-  
   return (
     <div className="w-full bg-gray-200 p-8 relative">
       <div className="max-w-6xl mx-auto">
@@ -40,7 +37,7 @@ export default function ReklaminisSkydelis() {
             {/* Čia yra konteineryje tik dėl mygtuką, kad būtų vienodas aukštis */}
             <div className="h-full flex items-end">
               <button className="bg-black text-white px-8 py-2 rounded">
-                Pereiti į svetainę
+                Į Svetainę
               </button>
             </div>
           </div>
@@ -58,13 +55,13 @@ export default function ReklaminisSkydelis() {
             {/* Čia yra konteineryje tik dėl mygtuką, kad būtų vienodas aukštis */}
             <div className="h-full flex items-end">
               <button className="bg-[#237803] text-white px-8 py-2 rounded">
-                Pereiti į svetainę
+                Į Svetainę
               </button>
             </div>
           </div>
         </div>
         
-        {/* Minauta informacija su dinamiškai atvaizduojamais metais */}
+        {/* Minauta informacija - pašalintas © ženklas ir metai prieš Minauta */}
         <div className="flex items-center justify-center text-gray-600 text-sm">
           <Image 
             src="/minauta-logo.png" 
@@ -74,7 +71,7 @@ export default function ReklaminisSkydelis() {
             className="mr-4"
           />
           <p>
-            © {currentYear} Minauta, UAB Įmonės kodas 303410025, PVM kodas LT100008888112,
+            Minauta, UAB Įmonės kodas 303410025, PVM kodas LT100008888112,
             <br/>
             Serbentų g. 55, Šiauliai, Tel. 8 41 54001, Fax. 8 41 540095
           </p>
