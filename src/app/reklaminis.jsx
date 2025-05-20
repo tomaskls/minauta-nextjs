@@ -10,9 +10,9 @@ export default function ReklaminisSkydelis() {
         </div>
         
         {/* Pagrindinis konteineris */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-4 mb-16">
           {/* Kairė pusė - Automobilis ir U2 Motors */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-12 md:mb-0">
             <Image 
               src="/u2motors-auto.webp" 
               alt="Opel Automobilis" 
@@ -35,7 +35,7 @@ export default function ReklaminisSkydelis() {
               </div>
             </div>
             {/* Čia yra konteineryje tik dėl mygtuką, kad būtų vienodas aukštis */}
-            <div className="h-full flex items-end">
+            <div className="h-full flex items-end md:-ml-20">
               <button className="bg-black text-white px-8 py-2 rounded">
                 Į Svetainę
               </button>
