@@ -2,80 +2,87 @@ import Image from 'next/image';
 
 export default function ReklaminisSkydelis() {
   return (
-    <div className="w-full bg-gray-200 p-8 relative">
-      <div className="max-w-6xl mx-auto">
-        {/* UAB MINAUTA užrašas viršuje */}
-        <div className="text-center mb-8 font-bold text-xl">
-          UAB MINAUTA
-        </div>
-        
-        {/* Pagrindinis konteineris */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-4 mb-16">
-          {/* Kairė pusė - Automobilis ir U2 Motors */}
-          <div className="flex flex-col items-center mb-12 md:mb-0">
+    <div className="w-full bg-gray-100 min-h-screen">
+      {/* Header */}
+      <header className="text-center py-12 bg-white">
+        <h1 className="text-4xl font-semibold mb-4 text-gray-800">
+          Sveiki atvykę į Minauta.LT
+        </h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Mes užsiimame automobilių priežiūra ir gyvūnų prekių tiekimu – kokybė, kuria galite pasitikėti.
+        </p>
+      </header>
+
+      {/* Pagrindinis konteineris su dviem sekcijomis */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
+          
+          {/* U2 Motors sekcija */}
+          <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg max-w-md">
             <Image 
-              src="/u2motors-auto.webp" 
-              alt="Opel Automobilis" 
-              width={500} 
-              height={300}
-              className="mb-4"
+              src="/images/U2Motors_LOGO.JPG" 
+              alt="U2 Motors Logo" 
+              width={200} 
+              height={100}
+              className="mb-6"
             />
-            <div className="flex items-center mb-4">
-              <div className="font-bold text-black text-2xl mr-2">
-                U2 MOTORS
-                <div className="text-sm font-normal">OPEL AUTOCENTRAS</div>
-              </div>
-              <div className="p-2">
-                <Image 
-                  src="/Opel_logo.svg.png" 
-                  alt="Opel logo" 
-                  width={60} 
-                  height={60}
-                />
-              </div>
-            </div>
-            {/* Čia yra konteineryje tik dėl mygtuką, kad būtų vienodas aukštis */}
-            <div className="h-full flex items-end md:-ml-20">
-              <button className="bg-black text-white px-8 py-2 rounded">
-                Į Svetainę
-              </button>
-            </div>
+            <h2 className="text-xl font-semibold mb-6 text-center text-gray-800">
+              Automobiliai. Priežiūra. Pasitikėjimas.
+            </h2>
+            <Image 
+              src="/images/Automobilis_1.jpg" 
+              alt="Opel automobilis" 
+              width={300} 
+              height={200}
+              className="mb-8 rounded"
+            />
+            <a 
+              href="https://www.u2motors.lt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded transition-colors mt-auto"
+            >
+              Pereiti į svetainę
+            </a>
           </div>
 
-          {/* Dešinė pusė - VETprekes.lt ir šuo */}
-          <div className="flex flex-col items-center">
-            {/* Pašalintas sansas-logo.png */}
+          {/* Vetprekes sekcija */}
+          <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg max-w-md">
             <Image 
-              src="/suo.png" 
-              alt="Šuo" 
-              width={400} 
-              height={300}
-              className="mb-4"
+              src="/images/Vetprekes_LOGO.JPG" 
+              alt="Vetprekes.lt Logo" 
+              width={200} 
+              height={100}
+              className="mb-6"
             />
-            {/* Čia yra konteineryje tik dėl mygtuką, kad būtų vienodas aukštis */}
-            <div className="h-full flex items-end">
-              <button className="bg-[#237803] text-white px-8 py-2 rounded">
-                Į Svetainę
-              </button>
-            </div>
+            <h2 className="text-xl font-semibold mb-6 text-center text-gray-800">
+              Gyvūnų poreikiai – mūsų rūpestis.
+            </h2>
+            <Image 
+              src="/images/Vetprekes_3.JPG" 
+              alt="Veterinarijos prekės" 
+              width={300} 
+              height={200}
+              className="mb-8 rounded"
+            />
+            <a 
+              href="https://www.vetprekes.lt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded transition-colors mt-auto"
+            >
+              Pereiti į svetainę
+            </a>
           </div>
         </div>
-        
-        {/* Minauta informacija - pašalintas © ženklas ir metai prieš Minauta */}
-        <div className="flex items-center justify-center text-gray-600 text-sm">
-          <Image 
-            src="/minauta-logo.png" 
-            alt="Minauta" 
-            width={100} 
-            height={40}
-            className="mr-4"
-          />
-          <p>
-            Minauta, UAB Įmonės kodas 303410025, PVM kodas LT100008888112,
-            <br/>
-            Serbentų g. 55, Šiauliai, Tel. 8 41 54001, Fax. 8 41 540095
-          </p>
-        </div>
+      </div>
+
+      {/* Įmonės informacija puslapio apačioje */}
+      <div className="text-center py-8 bg-gray-200 text-gray-600 text-sm">
+        <p>
+          © 2025 Minauta, UAB — Įmonės kodas 303410025, PVM kodas LT100008888112,<br/>
+          Serbentų g. 55, Šiauliai • Tel. 8 41 54001
+        </p>
       </div>
     </div>
   );
